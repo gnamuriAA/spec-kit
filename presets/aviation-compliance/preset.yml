@@ -1,0 +1,35 @@
+schema_version: "1.0"
+
+preset:
+  id: "aviation-compliance"
+  name: "Aviation Compliance Governance"
+  version: "1.0.0"
+  description: "Enforces FAA, DOT, and security compliance laws for aviation software — TDD, audit trails, PII encryption, and consumer protection."
+  author: "American Airlines TechOps"
+  repository: "https://github.com/gnamuriAA/spec-kit"
+  license: "MIT"
+
+requires:
+  speckit_version: ">=0.6.0"
+
+provides:
+  templates:
+    - type: "template"
+      name: "constitution-template"
+      file: "templates/constitution-template.md"
+      description: "Constitution template with aviation compliance laws (FAA, DOT, PII, audit trail)"
+      replaces: "constitution-template"
+
+    - type: "command"
+      name: "speckit.constitution"
+      file: "commands/speckit.constitution.md"
+      description: "Constitution command pre-loaded with aviation compliance principles"
+      replaces: "speckit.constitution"
+
+tags:
+  - "aviation"
+  - "compliance"
+  - "faa"
+  - "dot"
+  - "security"
+  - "governance"
